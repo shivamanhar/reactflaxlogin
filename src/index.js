@@ -17,6 +17,7 @@ import Registration from './Page/Registration';
 import { Provider } from 'react-redux'
 import store from './store'
 import UserEntryPage from './Page/UserEntryPage';
+import Profile from './Page/Profile';
 
 const router = createBrowserRouter([
   {
@@ -49,6 +50,11 @@ const router = createBrowserRouter([
       {
         path:'userentrypage',
         element:<UserEntryPage/>,
+        errorElement:<ErrorPage/>
+      },
+      {
+        path:'profile',
+        element:<Profile/>,
         errorElement:<ErrorPage/>
       }
 

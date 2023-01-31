@@ -15,6 +15,7 @@ export default function UserEntryPage() {
         }
     });
 
+    console.log('ok')
   return (
     <>
      <section className='hero  align-items-center'>

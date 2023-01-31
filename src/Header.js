@@ -18,7 +18,6 @@ function Header() {
 
     
     useEffect(()=>{
-      console.log(userInfo);
         if(userInfo)
         {
            // navigate('/userentrypage')
@@ -80,6 +79,9 @@ function Header() {
               <>
                 <LinkContainer to="/userentrypage">
                   <Nav.Link>UserEntery </Nav.Link>
+                </LinkContainer>
+                <LinkContainer to="/profile">
+                  <Nav.Link>Profile </Nav.Link>
                 </LinkContainer>
                 <Nav.Link onClick={logoutHandler}>Logout</Nav.Link>
               </>
