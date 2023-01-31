@@ -1,9 +1,10 @@
 import axios from 'axios'
 import { createMotionComponent } from 'framer-motion'
 import React, { useEffect, useState } from 'react'
-import { Container , Row, Col, Card} from 'react-bootstrap'
+import { Container , Row, Col, Card, Form} from 'react-bootstrap'
 import { useDispatch, useSelector } from 'react-redux'
 import {  useNavigate } from 'react-router-dom'
+import AddProfile from './AddProfile'
 
 
 export default function Profile() {
@@ -13,6 +14,7 @@ export default function Profile() {
     const {error, loading, userInfo}= userLogin
 
     const [profiledata, setProfileData] = useState([])
+   
   
     useEffect(()=>{
         if(userInfo)
@@ -37,6 +39,9 @@ export default function Profile() {
                         console.log(response?.message)
                         setProfileData(response.data)
                     });
+
+            
+            
         } 
         else
         {
@@ -91,6 +96,10 @@ export default function Profile() {
                     
                 </Col>
             </Row>
+        </Container>
+        <Container>
+            <AddProfile/>
+            
         </Container>
         </section>
 
